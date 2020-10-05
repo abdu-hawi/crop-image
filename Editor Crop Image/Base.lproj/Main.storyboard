@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,16 +10,16 @@
         <!--Crop View Controller-->
         <scene sceneID="ly1-3J-0Zy">
             <objects>
-                <viewController id="YjD-fP-5nB" customClass="CropViewController" customModule="Editor_Crop_Image" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="YjD-fP-5nB" customClass="CropViewController" customModule="Editor_Crop_Image" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="04c-bV-6Uc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7c-mO-AcQ" userLabel="Content scroll View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="780"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9u-bC-2CW">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="780"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="kvd-jO-jR4">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="165"/>
@@ -35,7 +35,7 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="DdK-Od-R9s"/>
                                     </scrollView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_edge" translatesAutoresizingMaskIntoConstraints="NO" id="lDB-9F-HPV">
-                                        <rect key="frame" x="103.5" y="324.5" width="207" height="121"/>
+                                        <rect key="frame" x="103.5" y="329.5" width="207" height="121"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="121" id="mqe-dE-PCx"/>
                                             <constraint firstAttribute="width" constant="207" id="vUo-Sf-ukF"/>
@@ -53,7 +53,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j1A-9p-IeY">
-                                <rect key="frame" x="20" y="778" width="374" height="30"/>
+                                <rect key="frame" x="20" y="832" width="374" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nII-i7-Sc3">
                                         <rect key="frame" x="0.0" y="0.0" width="177" height="30"/>
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bm-2k-QqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-546.37681159420299" y="95.758928571428569"/>
+            <point key="canvasLocation" x="1250.7246376811595" y="94.419642857142847"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -112,13 +112,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hbB-yk-emu">
-                                <rect key="frame" x="0.0" y="44" width="414" height="248"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="O4S-71-bbj"/>
-                                    <constraint firstAttribute="height" constant="248" id="Z1J-mg-e4E"/>
-                                </constraints>
-                            </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kot-c4-P2R">
                                 <rect key="frame" x="0.5" y="332" width="413.5" height="157"/>
                                 <subviews>
@@ -177,17 +170,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hbB-yk-emu">
+                                <rect key="frame" x="67" y="68" width="280" height="191"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.64705882349999999" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="O4S-71-bbj"/>
+                                    <constraint firstAttribute="height" constant="191" id="Z1J-mg-e4E"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hbB-yk-emu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Grv-Nq-IpY"/>
+                            <constraint firstItem="hbB-yk-emu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-67" id="Grv-Nq-IpY"/>
                             <constraint firstItem="9HO-N2-lmz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HR6-Ck-Igh"/>
                             <constraint firstItem="Kot-c4-P2R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="0.5" id="J6u-qM-0Pd"/>
                             <constraint firstItem="9HO-N2-lmz" firstAttribute="top" secondItem="Kot-c4-P2R" secondAttribute="bottom" constant="26" id="hQo-vm-7wf"/>
-                            <constraint firstItem="Kot-c4-P2R" firstAttribute="trailing" secondItem="hbB-yk-emu" secondAttribute="trailing" id="izf-rn-0n2"/>
-                            <constraint firstItem="hbB-yk-emu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ksV-BR-sPp"/>
+                            <constraint firstItem="Kot-c4-P2R" firstAttribute="trailing" secondItem="hbB-yk-emu" secondAttribute="trailing" constant="67" id="izf-rn-0n2"/>
+                            <constraint firstItem="hbB-yk-emu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="ksV-BR-sPp"/>
                             <constraint firstItem="Kot-c4-P2R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="332" id="y06-HI-oZT"/>
-                            <constraint firstItem="hbB-yk-emu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ygs-nv-tmr"/>
+                            <constraint firstItem="hbB-yk-emu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="ygs-nv-tmr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -201,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="96"/>
+            <point key="canvasLocation" x="531.8840579710145" y="95.758928571428569"/>
         </scene>
     </scenes>
     <resources>

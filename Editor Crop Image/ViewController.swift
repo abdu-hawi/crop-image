@@ -62,10 +62,37 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         guard let pickedImg = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             return
         }
-        imageChoice = pickedImg
-        dismiss(animated: true, completion: {
-            self.performSegue(withIdentifier: "cropSegue", sender: nil)
-        })
+//        mainImage.image = pickedImg
+//        dismiss(animated: true, completion: nil)
+        
+        //MARK: fix orientation
+        fixOrientation(img: pickedImg) { (imageFix) in
+            self.imageChoice = imageFix
+            DispatchQueue.main.async {
+                self.dismiss(animated: true, completion: {
+                    self.performSegue(withIdentifier: "cropSegue", sender: nil)
+                })
+            }
+        }
+//        imageChoice = pickedImg
+//        dismiss(animated: true, completion: {
+//            self.performSegue(withIdentifier: "cropSegue", sender: nil)
+//        })
+    }
+    
+    private func fixOrientation(img:UIImage,compltion: @escaping(UIImage)->()){
+        DispatchQueue.global(qos: .background).async {
+            if (img.imageOrientation == .up){
+                compltion(img)
+            }
+            
+            UIGraphicsBeginImageContextWithOptions(img.size, false, img.scale)
+            let rect = CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height)
+            img.draw(in: rect)
+            let normalizedImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            compltion(normalizedImage)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
